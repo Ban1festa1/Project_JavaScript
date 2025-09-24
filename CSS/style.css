@@ -1,0 +1,254 @@
+:root {
+    --bg: #131313;
+    --ink: #FFFFFF;
+    --muted: #C9C9C9;
+    --gold: #E3B873;
+    --tab-idle: #5A5A5A;
+    --dot: #3B4049;
+    --line: #748091;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.91;
+}
+
+.page {
+    width: 1440px;
+    margin: 107px auto 123px;
+    padding: 0 134px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 452px 679px;
+    column-gap: 40px;
+    width: 1171px;
+    height: 552.28px;
+    align-items: start;
+}
+
+.left {
+    width: 452px;
+    min-height: 482px;
+    display: flex;
+    flex-direction: column;
+    margin-top: calc(24px + 45px);
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 1.39;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 1.39;
+    text-transform: uppercase;
+    letter-spacing: -0.07em;
+    margin-bottom: 18px;
+    color: var(--gold);
+}
+
+.title-line {
+    width: 96px;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 2px
+}
+
+.lead {
+    color: var(--muted);
+    max-width: 442px;
+    margin-bottom: 28px;
+}
+
+.facts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 40px;
+    margin-bottom: 24px
+}
+
+.fact dt {
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+.fact dd {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.64;
+    color: #E7ECF2;
+    white-space: pre-line;
+}
+
+.right {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabs {
+    width: 623px;
+    height: 24px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.tab {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0 0 12px;
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.39;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    color: var(--tab-idle);
+    position: relative;
+    white-space: nowrap;
+}
+
+.tab.is-active {
+    color: var(--gold)
+}
+
+.tab.is-active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 2px
+}
+
+.photo {
+    width: 679px;
+    height: 482px;
+    overflow: hidden
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 40px 90px rgba(0, 0, 0, .55)
+}
+
+.controls {
+    margin-top: auto;
+    width: 205.683px;
+    height: 13.276px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrow {
+    --c: rgba(255, 255, 255, 0.5);
+    width: 50px;
+    height: 20px;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.arrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    right: 8px;
+    height: 2px;
+    background: var(--c);
+    transform: translateY(-50%);
+    border-radius: 2px;
+}
+
+.arrow::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+}
+
+.arrow--left::after {
+    left: 0;
+    border-right-color: var(--c);
+}
+
+.arrow--right::after {
+    right: 0;
+    border-left-color: var(--c);
+}
+
+.arrow:hover {
+    --c: #fff;
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    gap: 18px
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 0;
+    background: #3B4049;
+    cursor: pointer;
+    transition: opacity .2s
+}
+
+.dot.is-active {
+    background: var(--ink)
+}
+
+.dot:not(.is-active):hover {
+    opacity: .8
+}
