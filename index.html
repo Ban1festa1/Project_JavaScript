@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Slider — pixel perfect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Nunito+Sans:wght@400&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+  <div class="page">
+    <section class="layout">
+      <div class="left">
+        <p class="eyebrow">COMPLETED</p>
+        <h1 class="title">PROJECTS <span class="title-line"></span></h1>
+
+        <p class="lead">
+          Only a small part of the work performed by our company is presented on the site.
+          For 14 years on in the construction market we have made happy more than 1000 families
+        </p>
+
+        <dl class="facts">
+          <div class="fact">
+            <dt>CITY:</dt>
+            <dd class="js-city">Rostov-on-Don<br>LCD admiral</dd>
+          </div>
+          <div class="fact">
+            <dt>APARTMENT AREA:</dt>
+            <dd class="js-area">81 m2</dd>
+          </div>
+          <div class="fact">
+            <dt>REPAIR TIME:</dt>
+            <dd class="js-time">3.5 months</dd>
+          </div>
+          <div class="fact">
+            <dt>REPAIR COST:</dt>
+            <dd class="js-cost">Upon request</dd>
+          </div>
+        </dl>
+
+        <div class="controls">
+          <button class="arrow arrow--left" aria-label="Prev"></button>
+          <div class="dots">
+            <button class="dot is-active" aria-label="1"></button>
+            <button class="dot" aria-label="2"></button>
+            <button class="dot" aria-label="3"></button>
+          </div>
+          <button class="arrow arrow--right" aria-label="Next"></button>
+        </div>
+      </div>
+
+      <div class="right">
+        <nav class="tabs">
+          <button class="tab is-active" type="button">ROSTOV-ON-DON, ADMIRAL</button>
+          <button class="tab" type="button">SOCHI THIEVES</button>
+          <button class="tab" type="button">ROSTOV-ON-DON PATRIOTIC</button>
+        </nav>
+
+        <figure class="photo">
+          <img class="js-photo" src="img/slide-1.png" alt="Slides">
+        </figure>
+      </div>
+    </section>
+  </div>
+
+  <script src="JS/script.js"></script>
+</body>
+
+</html>
